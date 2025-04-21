@@ -1,3 +1,4 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +11,7 @@ body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -36,6 +38,7 @@ body {
   font-weight: 400;
 }
 
+/* Hero Section */
 .hero {
   background-color: #e8e8e8;
   height: calc(100vh - 100px);
@@ -57,44 +60,34 @@ body {
   max-width: 280px;
 }
 
-.work-hero {
-  padding: 80px 50px;
-  text-align: center;
+/* Carousel */
+.carousel-container {
+  padding: 60px 50px;
+  background-color: #e8e8e8;
 }
 
 .carousel {
   display: flex;
+  gap: 30px;
   overflow-x: auto;
-  gap: 20px;
-  padding: 20px 0;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 20px;
 }
 
 .carousel-item {
   flex: 0 0 auto;
-  width: 250px;
-  background-color: #e8e8e8;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+  width: 200px;
+  scroll-snap-align: center;
+  text-align: center;
 }
 
 .carousel-item img {
   width: 100%;
-  border-radius: 10px 10px 0 0;
-}
-
-.carousel-item h2 {
-  padding: 15px;
-  font-size: 18px;
-}
-
-.carousel-item:hover {
-  transform: scale(1.05);
-}
-
-.work-section {
-  padding: 50px;
-  background-color: #e8e8e8;
-  margin: 30px 0;
   border-radius: 10px;
+}
+
+.carousel-item p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #111;
 }
