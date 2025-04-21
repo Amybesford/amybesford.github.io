@@ -10,7 +10,6 @@ body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -37,7 +36,6 @@ body {
   font-weight: 400;
 }
 
-/* Hero Section */
 .hero {
   background-color: #e8e8e8;
   height: calc(100vh - 100px);
@@ -57,4 +55,46 @@ body {
   margin-top: 20px;
   font-size: 14px;
   max-width: 280px;
+}
+
+.work-hero {
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 250px;
+  background-color: #e8e8e8;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.carousel-item img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.carousel-item h2 {
+  padding: 15px;
+  font-size: 18px;
+}
+
+.carousel-item:hover {
+  transform: scale(1.05);
+}
+
+.work-section {
+  padding: 50px;
+  background-color: #e8e8e8;
+  margin: 30px 0;
+  border-radius: 10px;
 }
