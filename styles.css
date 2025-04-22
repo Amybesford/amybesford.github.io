@@ -17,7 +17,7 @@ body {
   align-items: center;
   padding: 30px 50px;
   background-color: #fff; /* Clean, minimal background */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add slight shadow for depth */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
 }
 
 .logo {
@@ -43,7 +43,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #ff8c00; /* Subtle hover effect */
+  color: #333;
 }
 
 /* Hero Section */
@@ -75,36 +75,50 @@ body {
 
 /* Sections */
 .sections {
-  padding: 80px 50px;
+  padding: 60px 50px;
   background-color: #f4f4f4;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 40px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 50px; /* Space between sections */
 }
 
+/* Section Box */
 .section-box {
-  padding: 50px;
+  padding: 40px 50px;
   background-color: #fff;
-  color: #333;
+  color: #111;
   text-decoration: none;
   font-size: 24px;
   font-weight: 600;
-  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 5px solid #ccc; /* Thin light line on the left */
   transition: all 0.3s ease;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for sophistication */
-  transform: translateY(0);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); /* Soft shadow for sophistication */
 }
 
 .section-box:hover {
-  background-color: #ff8c00; /* Bold accent color */
-  color: #fff;
-  transform: translateY(-10px); /* Floating effect */
+  background-color: #fff;
+  color: #111;
+  transform: translateY(0);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Elevated shadow on hover */
 }
 
-.section-box:active {
-  transform: translateY(2px); /* Subtle press effect */
+/* Section Titles */
+.section-box h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+/* Content */
+.section-box p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #666;
+  line-height: 1.6;
 }
 
 /* Add cool modern font */
