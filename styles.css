@@ -1,3 +1,4 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +6,7 @@
 }
 
 body {
-  background-color: #f4f4f4; /* Softer background for a modern feel */
+  background-color: #f9f9f3; /* Very light beige-grey background */
   color: #111;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -17,7 +18,7 @@ body {
   align-items: center;
   padding: 30px 50px;
   background-color: #fff; /* Clean, minimal background */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  box-shadow: none; /* No shadow */
 }
 
 .logo {
@@ -55,7 +56,7 @@ body {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05); /* Light shadow for elegance */
+  box-shadow: none; /* No shadow */
 }
 
 .hero h1 {
@@ -76,7 +77,7 @@ body {
 /* Sections */
 .sections {
   padding: 60px 50px;
-  background-color: #f4f4f4;
+  background-color: #f9f9f3; /* Very light beige-grey background */
   display: flex;
   flex-direction: column;
   gap: 50px; /* Space between sections */
@@ -93,32 +94,28 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-left: 5px solid #ccc; /* Thin light line on the left */
+  border-left: 5px solid #ccc; /* Thin left border */
   transition: all 0.3s ease;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); /* Soft shadow for sophistication */
 }
 
-.section-box:hover {
-  background-color: #fff;
-  color: #111;
-  transform: translateY(0);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Elevated shadow on hover */
-}
-
-/* Section Titles */
 .section-box h2 {
   font-size: 32px;
   font-weight: 700;
   color: #111;
+  margin-left: 0; /* Title aligned to the left */
   margin-bottom: 20px;
 }
 
-/* Content */
 .section-box p {
   font-size: 18px;
   font-weight: 300;
   color: #666;
   line-height: 1.6;
+}
+
+/* Thin line separating sections */
+.section-box:not(:last-child) {
+  border-bottom: 1px solid #ccc; /* Thin separating line */
 }
 
 /* Add cool modern font */
