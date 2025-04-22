@@ -1,0 +1,86 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #424846;
+  color: #111;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  background-color: #e8e8e8;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #111;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #e8e8e8;
+  height: calc(100vh - 100px);
+  padding: 80px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 10vw;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.description {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+/* Sections */
+.sections {
+  padding: 60px 50px;
+  background-color: #e8e8e8;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-box {
+  padding: 40px;
+  background-color: #fff;
+  color: #111;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 600;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.section-box:hover {
+  background-color: #dcdcdc;
+}
