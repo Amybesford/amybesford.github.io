@@ -1,3 +1,37 @@
+/* General font setup */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+  color: #111;
+}
+
+/* Hero section with your name */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 96px;
+  font-weight: 700;
+  margin: 0;
+  color: #111;
+}
+
+/* Section container */
+.sections {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* Keep your original styles */
 .section-box {
   display: flex;
   justify-content: space-between;
@@ -23,6 +57,7 @@
   font-weight: 500;
   margin-bottom: 10px;
   color: #111;
+  font-family: 'Inter', sans-serif;
 }
 
 .section-left p {
