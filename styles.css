@@ -124,3 +124,71 @@ body {
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+/* Selected Work Section */
+.selected-work-section {
+  padding: 60px 50px;
+  background-color: #f9f9f3;
+  border-top: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Header with count and subtitle */
+.selected-work-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.selected-work-header h2 {
+  font-size: 32px;
+  font-weight: 500;
+  color: #111;
+}
+
+.selected-work-header h2 sup {
+  font-size: 16px;
+  font-weight: 400;
+  color: #666;
+}
+
+.selected-work-header span {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Project entry */
+.project-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 30px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.project-info {
+  max-width: 70%;
+}
+
+.project-info h3 {
+  font-size: 48px;
+  font-weight: 500;
+  margin: 0;
+  color: #111;
+}
+
+.project-info p {
+  font-size: 18px;
+  color: #444;
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+.project-year {
+  font-size: 36px;
+  color: #111;
+  white-space: nowrap;
+}
+
