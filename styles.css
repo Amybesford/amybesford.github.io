@@ -1,194 +1,39 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #f9f9f3; /* Very light beige-grey background */
-  color: #111;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 50px;
-  background-color: #fff; /* Clean, minimal background */
-  box-shadow: none; /* No shadow */
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: 700;
-  color: #333;
-  letter-spacing: 1px;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #333;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #333;
-}
-
-/* Hero Section */
-.hero {
-  background-color: #fff;
-  height: calc(100vh - 100px);
-  padding: 80px 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  box-shadow: none; /* No shadow */
-}
-
-.hero h1 {
-  font-size: 10vw;
-  line-height: 1.1;
-  font-weight: 700;
-  color: #111;
-  margin-bottom: 20px;
-}
-
-.description {
-  margin-top: 20px;
-  font-size: 18px;
-  font-weight: 300;
-  color: #666;
-}
-
-/* Sections */
-.sections {
-  padding: 60px 50px;
-  background-color: #f9f9f3; /* Very light beige-grey background */
-  display: flex;
-  flex-direction: column;
-  gap: 50px; /* Space between sections */
-}
-
-/* Section Box */
 .section-box {
-  padding: 40px 50px;
-  background-color: #fff;
-  color: #111;
-  text-decoration: none;
-  font-size: 24px;
-  font-weight: 600;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-left: 5px solid #ccc; /* Thin left border */
-  transition: all 0.3s ease;
-}
-
-.section-box h2 {
-  font-size: 32px;
-  font-weight: 700;
-  color: #111;
-  margin-left: 0; /* Title aligned to the left */
-  margin-bottom: 20px;
-}
-
-.section-box p {
-  font-size: 18px;
-  font-weight: 300;
-  color: #666;
-  line-height: 1.6;
-}
-
-/* Thin line separating sections */
-.section-box:not(:last-child) {
-  border-bottom: 1px solid #ccc; /* Thin separating line */
-}
-
-/* Add cool modern font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-
-body {
-  font-family: 'Roboto', sans-serif;
-}
-
-/* Selected Work Section */
-.selected-work-section {
-  padding: 60px 50px;
-  background-color: #f9f9f3;
-  border-top: 1px solid #ddd;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-/* Header with count and subtitle */
-.selected-work-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
-.selected-work-header h2 {
-  font-size: 32px;
-  font-weight: 500;
-  color: #111;
-}
-
-.selected-work-header h2 sup {
-  font-size: 16px;
-  font-weight: 400;
-  color: #666;
-}
-
-.selected-work-header span {
-  font-size: 16px;
-  color: #666;
-}
-
-/* Project entry */
-.project-entry {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding-top: 30px;
+  padding: 40px 0;
+  text-decoration: none;
+  color: #111;
   border-top: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
 }
 
-.project-info {
-  max-width: 70%;
+.section-box:hover {
+  background-color: #f3f3f3;
 }
 
-.project-info h3 {
+.section-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-left h2 {
   font-size: 48px;
   font-weight: 500;
-  margin: 0;
+  margin-bottom: 10px;
   color: #111;
 }
 
-.project-info p {
+.section-left p {
   font-size: 18px;
-  color: #444;
-  margin-top: 10px;
   font-weight: 300;
+  color: #666;
 }
 
-.project-year {
+.section-right {
   font-size: 36px;
+  font-weight: 500;
   color: #111;
   white-space: nowrap;
 }
-
