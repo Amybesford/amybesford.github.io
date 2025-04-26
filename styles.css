@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #fff;
+  background-color: #e5e3e3;
   color: #111;
 }
 
@@ -13,12 +13,12 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #fff;
+  background-color: #e5e3e3;
   padding: 0 20px;
 }
 
 .hero h1 {
-  font-size: 96px;
+  font-size:10em;
   font-weight: 700;
   margin: 0;
   color: #111;
@@ -35,16 +35,16 @@ body {
 .section-box {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: baseline; /* Change this line */
   padding: 40px 0;
   text-decoration: none;
   color: #111;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid #e5e3e3;
   transition: all 0.3s ease;
 }
 
 .section-box:hover {
-  background-color: #f3f3f3;
+  background-color: #e5e3e3;
 }
 
 .section-left {
