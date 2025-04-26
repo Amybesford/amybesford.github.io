@@ -6,7 +6,7 @@ body {
   color: #111;
 }
 
-/* Hero section with your name */
+/* Hero section */
 .hero {
   height: 100vh;
   display: flex;
@@ -18,24 +18,88 @@ body {
 }
 
 .hero h1 {
-  font-size:10em;
+  font-size: 8em;
   font-weight: 700;
   margin: 0;
   color: #111;
 }
 
-/* Section container */
+/* Portfolio section */
+.portfolio {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.portfolio-item {
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.portfolio-item:hover .portfolio-image {
+  transform: scale(1.05);
+}
+
+.portfolio-caption {
+  padding: 20px;
+  text-align: center;
+  background: #fff;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  opacity: 0.95;
+}
+
+.portfolio-caption h3 {
+  font-size: 24px;
+  margin: 0 0 10px 0;
+}
+
+.portfolio-caption p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+/* Fade + slide effect on caption */
+.portfolio-item:hover .portfolio-caption {
+  opacity: 1;
+  transform: translateY(-5px);
+}
+
+/* Other Sections */
 .sections {
   max-width: 1200px;
   margin: 0 auto;
   padding: 60px 20px;
 }
 
-/* Keep your original styles */
+/* Section links */
 .section-box {
   display: flex;
   justify-content: space-between;
-  align-items: baseline; /* Change this line */
+  align-items: baseline;
   padding: 40px 0;
   text-decoration: none;
   color: #111;
@@ -57,7 +121,6 @@ body {
   font-weight: 500;
   margin-bottom: 10px;
   color: #111;
-  font-family: 'Inter', sans-serif;
 }
 
 .section-left p {
