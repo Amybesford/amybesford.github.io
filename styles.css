@@ -12,11 +12,11 @@ body {
 .hero {
   height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  justify-content: space-between; /* Adjust to push text and logo apart */
+  align-items: flex-end; /* Align items to the bottom */
+  text-align: left; /* Align text to the left */
   background-color: rgb(255, 255, 255);
-  padding: 0 20px;
+  padding: 0 40px; /* Add more padding to the sides */
   position: relative; /* Add this if .nav is absolute */
 }
 
@@ -274,4 +274,46 @@ body {
   .image-carousel-container {
     width: 90%;
   }
+}
+
+/* New styles for the hero content */
+.hero-content {
+  display: flex;
+  justify-content: space-between; /* Push title to the left, logo to the right */
+  align-items: flex-end; /* Align both to the bottom */
+  width: 100%; /* Take full width of the hero */
+  padding: 0 40px; /* More horizontal padding */
+}
+
+.portfolio-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-design {
+  font-size: 14em; /* Even larger font size */
+  font-weight: 700;
+  line-height: 0.75; /* Tighter line height */
+  color: #111;
+  margin-bottom: .25em; /* Further reduce space below 'Design' */
+}
+
+.portfolio-portfolio {
+  font-size: 14em; /* Even larger font size */
+  font-weight: 700;
+  line-height: 0.75;
+  color: #111;
+}
+
+.logo-container {
+  /* Adjust for smaller size and alignment */
+  /* display: flex; */ /* Not strictly needed if just containing the image */
+  /* justify-content: flex-end; */ /* Align to the right of the hero-content */
+  align-self: flex-end; /* Ensure it aligns to the bottom */
+  margin-bottom: 0.2em; /* Adjust vertical spacing */
+}
+
+.logo {
+  max-height: 4.5em; /* Much smaller logo */
+  /* vertical-align: bottom; */ /* Ensure baseline alignment */
 }
