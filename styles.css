@@ -1,0 +1,213 @@
+/* General font setup */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: rgb(255, 255, 255);
+  color: #111;
+  }
+  
+  /* Hero section */
+  .hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  padding: 0 20px;
+  position: relative; /* Add this if .nav is absolute */
+  }
+  
+  .hero h1 {
+  font-size: 8em;
+  font-weight: 700;
+  margin: 0;
+  color: #111;
+  }
+  
+  /* Portfolio section */
+  .portfolio {
+  max-width: 1400px; /* Make the container even wider */
+  margin: 0 auto;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px; /* More space between projects */
+  }
+  
+  .portfolio-item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  }
+  
+  /* Alternate layout: flip image and text */
+  .portfolio-item:nth-child(even) {
+  flex-direction: row-reverse;
+  }
+  
+  /* Image styling */
+  .portfolio-image {
+  width: 65%; /* Larger image */
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 0; /* Remove rounded corners */
+  }
+  
+  /* Text styling */
+  .portfolio-text {
+  width: 35%;
+  }
+  
+  .portfolio-text h3 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  }
+  
+  .portfolio-text p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.6;
+  }
+  
+  /* Remove all hover effects */
+  .portfolio-caption,
+  .portfolio-item:hover .portfolio-caption {
+  all: unset;
+  }
+  
+  /* Section box styles (updated with hover effect) */
+  .sections {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  }
+  
+  .section-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 40px 0;
+  text-decoration: none;
+  color: #111;
+  border-top: 1px solid rgb(238, 238, 238); /* Light grey */
+  transition: all 0.2s ease-in-out; /* Smooth transition */
+  }
+  
+  .section-box:hover {
+  background-color: rgba(0, 0, 0, 0.05); /* Very light grey on hover */
+  }
+  
+  .section-left {
+  display: flex;
+  flex-direction: column;
+  transition: font-size 0.2s ease-in-out; /* Smooth transition for font-size */
+  }
+  
+  .section-left h2 {
+  font-size: 48px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #111;
+  transition: font-size 0.2s ease-in-out; /* Smooth transition for font-size */
+  }
+  
+  .section-left p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #666;
+  transition: font-size 0.2s ease-in-out; /* Smooth transition for font-size */
+  }
+  
+  .section-right {
+  font-size: 36px;
+  font-weight: 500;
+  color: #111;
+  white-space: nowrap;
+  transition: font-size 0.2s ease-in-out; /* Smooth transition for font-size */
+  }
+  
+  .section-box:hover .section-left h2,
+  .section-box:hover .section-left p,
+  .section-box:hover .section-right {
+  font-size: 1.1em; /* Increase font size on hover (1.1 times the original) */
+  }
+  
+  /* Navigation Styles */
+  .nav {
+  position: absolute; /* Or fixed, depending on layout */
+  top: 20px;
+  right: 20px;
+  }
+  
+  .nav a {
+  color: #111;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  }
+  
+  .nav a:hover {
+  text-decoration: underline;
+  }
+  
+  /* Carousel Styles */
+  .image-carousel-container {
+  position: relative;
+  width: 80%; /* Adjust as needed */
+  margin: 20px auto;
+  overflow: hidden;
+  }
+  
+  .image-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+  scroll-behavior: smooth;
+  }
+  
+  .carousel-item {
+  flex: 0 0 auto;
+  width: 70%; /* Main image width */
+  scroll-snap-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .carousel-item img {
+  max-width: 100%;
+  max-height: 80vh; /* Adjust as needed */
+  object-fit: contain;
+  }
+  
+  .carousel-control {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(200, 200, 200, 0.2); /* Faint grey */
+  color: rgba(100, 100, 100, 0.5);
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  transform: translateY(-50%);
+  z-index: 10;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .carousel-control:hover {
+  background-color: rgba(200, 200, 200, 0.5);
+  color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .carousel-control.prev {
+  left: 10px;
+  }
+  
+  .carousel-control.next {
+  right: 10px;
+  }

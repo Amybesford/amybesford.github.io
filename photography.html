@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Amy Besford Portfolio - Photography</title>
+<link rel="stylesheet" href="styles.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<header class="hero">
+<h1>Photography</h1>
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+</nav>
+</header>
+
+<div class="image-carousel-container">
+<div class="image-carousel">
+<div class="carousel-item">
+<img src="Portfolio-images/lauren-rocks2.jpeg" alt="Photo 1" />
+</div>
+<div class="carousel-item">
+<img src="Portfolio-images/lauren-beach5.jpeg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/lauren-rocks.jpeg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/lauren-beach3.jpeg" alt="Photo 2" />
+</div>
+<div class="carousel-item">
+<img src="Portfolio-images/santamonica3.jpeg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/santamonica8.jpeg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/santamonica4.jpeg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/santamonica5.jpeg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/santamonica7.jpeg" alt="Photo 2" />
+</div>
+<div class="carousel-item">
+<img src="Portfolio-images/santamonica6.jpeg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/santamonica2.jpeg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/santamonica3.jpeg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/phoebebubbles.jpeg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/phoebebear.jpeg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/phoebe2.jpeg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/manbird.jpeg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/phoebebird.jpeg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/gen.jpeg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/joinery.jpeg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/sail-boats.jpeg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/sausalitoman.jpeg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/snow3.jpeg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/snow.jpeg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/snow4.jpeg" alt="Photo 2" />
+</div>
+<div class="carousel-item">
+<img src="Portfolio-images/mumdoubleexposure.jpeg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/bolinas-surfers.jpeg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/the ridge.jpeg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/theridge2.jpeg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/fishing.jpg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/estella.jpeg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/eye.jpg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/road.jpg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/lake.jpg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/tent.jpg" alt="Photo 2" />
+</div>
+
+<div class="carousel-item">
+<img src="Portfolio-images/ontherock.jpg" alt="Photo 2" />
+</div>
+</div>
+<button class="carousel-control prev">&#9664;</button>
+<button class="carousel-control next">&#9654;</button>
+</div>
+
+<script>
+const carousel = document.querySelector('.image-carousel');
+const firstItem = carousel.querySelector('.carousel-item');
+const prevButton = document.querySelector('.carousel-control.prev');
+const nextButton = document.querySelector('.carousel-control.next');
+
+const itemWidth = firstItem.offsetWidth; // Get width of one item
+
+prevButton.addEventListener('click', () => {
+carousel.scrollLeft -= itemWidth;
+});
+
+nextButton.addEventListener('click', () => {
+carousel.scrollLeft += itemWidth;
+});
+</script>
+
+</body>
+</html>
