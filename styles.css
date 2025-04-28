@@ -34,7 +34,7 @@ body {
   padding: 80px 20px;
   display: flex;
   flex-direction: column;
-  gap: 120px; /* More space between projects */
+  gap: 130px; /* More space between projects */
 }
 
 .portfolio-item {
@@ -195,7 +195,7 @@ body {
   color: rgba(100, 100, 100, 0.5);
   border: none;
   font-size: 2em;
-  cursor: pointer;
+  cursor:pointer;
   transform: translateY(-50%);
   z-index: 10;
   transition: background-color 0.3s ease, color 0.3s ease;
