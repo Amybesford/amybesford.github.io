@@ -27,6 +27,15 @@ body {
   color: #111;
 }
 
+.p2 {
+  font-size: medium;
+  font-size: 300;
+  text-align: justify;
+  align-self: auto;
+}
+
+
+
 /* Portfolio section */
 .portfolio {
   max-width: 1400px; /* Make the container even wider */
@@ -216,8 +225,9 @@ body {
 
 /* ------------ Mobile Responsive Adjustments ------------ */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 3em;
+    .hero h1 {
+      font-size: 3em;
+    }
   }
 
   .portfolio-item {
@@ -317,3 +327,9 @@ body {
   max-height: 4.5em; /* Much smaller logo */
   /* vertical-align: bottom; */ /* Ensure baseline alignment */
 }
+
+/* ------------ Mobile Responsive Adjustments ------------ */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 3em;
+  }
