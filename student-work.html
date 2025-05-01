@@ -1,107 +1,328 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amy Besford Portfolio - Student Work</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet" />
-</head>
-<body>
+/* General font setup */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: rgb(255, 255, 255);
+  color: #111;
+}
 
-  <header class="hero">
-    <h1>Student Work</h1>
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-    </nav>
-  </header>
- 
-  <h2>As a Graphic Communication major at Cal Poly, I combined creativity with technical skills to bring ideas to life in both digital and print formats. Concentrating in Design Reproduction Technology, I was able to blend graphic design, typography, branding, color theory, and quality control, with a focus on creating designs for print, packaging, and digital media.
-  </h2>
+/* Content wrapper for alignment */
+.content-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
 
+/* Hero section - Updated */
+.hero {
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px;
+  position: relative;
+  margin-bottom: 40px;
+}
 
-  <section class="portfolio">
-    
-    <div class="portfolio-item">
-      <img src="student-images/type-c.png" alt="Description of image 1" class="portfolio-image" />
-      <div class="portfolio-text">
-        <h3>Type Comparison Poster</h3>
-        <p>This assignment asked me to select two contrasting fonts and create a design to highlight their similarities and differences. The project involved analyzing the fonts' characteristics—like weight, style, and spacing—and showcasing how they could complement or contrast with each other in a layout. 
-          .</p>
-      </div>
-    </div>
+/* Consistent page titles */
+.hero h1 {
+  font-size: 6em;
+  font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #111;
+}
 
-    <div class="portfolio-item">
-      <img src="student-images/recipe-book.jpg" alt="Description of image 2" class="portfolio-image" />
-      <div class="portfolio-text">
-        <h3>Recipe Book</h3>
-        <p>In GRC 318, Digital Typography, we explored the art and science of typography through modern tools for print and digital publishing, with a focus on communication, visual organization, and professional design practices.
-          For this project, I designed a set of recipe pages printed as a small booklet. The process included mood-boarding, drafting layouts, baking and photographing the recipe, and combining everything into a polished book. 
-          .</p>
-      </div>
-    </div>
+/* Landing page specific styles */
+.hero-content {
+  display: flex;
+  align-items: baseline;
+  gap: 40px;
+  width: 100%;
+}
 
-    <div class="portfolio-item">
-      <img src="student-images/packaging1.png" alt="Description of image 3" class="portfolio-image" />
-      <div class="portfolio-text">
-        <h3>Hair Care Packaging</h3>
-        <p>For this project I was tasked with redesigning the packaging for a product that helps to address a user issue. I decided to focus on hair care packaging and created a design that holds the podcast as well as refills for a travel sized version. Furthermore we were tasked with addressing accessibility issues as well, i focus on this by creating a handle design that is strong and easy to hold on the box as well as clear typography throughout the design. 
-          Over the course of this project I mood boarded, designed the dieline, created 32 renderings in esko, and printed out the final version on vinyl and corrugated cardboard. 
-          </p>
-      </div>
-    </div>
+.portfolio-title {
+  display: flex;
+  flex-direction: column;
+}
 
-    <div class="portfolio-item">
-      <img src="student-images/cards.png" alt="Description of image 4" class="portfolio-image" />
-      <div class="portfolio-text">
-        <h3>Playing Cards</h3>
-        <p>One of the earliest projects I completed in Graphic Communication was designing and printing a deck of playing cards. Throughout the course, we learned how to create digital files and explore workflows for both print and web. The class covered topics like file automation, proofing, output systems, and file delivery. My deck had an ocean theme, featuring some of my favourite animals.
-          
-          </p>
-      </div>
-    </div>
+.portfolio-design,
+.portfolio-portfolio {
+  font-size: 14em;
+  font-weight: 700;
+  line-height: 0.75;
+  color: #111;
+}
 
-    <div class="portfolio-item">
-      <img src="student-images/catbook.png" alt="Description of image 5" class="portfolio-image" />
-      <div class="portfolio-text">
-        <h3>Childrens Book</h3>
-        <p>In Art 102- Art and Design Foundation Studies, we were tasked with illustrating figures of speech in any way we wanted. Originally, I created screen-printed designs for a zine. Later, I transformed them into a digital book to give the work a fresh format and feel. 
-        </p>
-      </div>
-    </div>
+.logo-container {
+  align-self: flex-end;
+  margin-bottom: 0.5em;
+}
 
-    <div class="portfolio-item">
-      <img src="student-images/shabang.png" alt="Description of image 6" class="portfolio-image" />
-      <div class="portfolio-text">
-        <h3>Social Media Campaign</h3>
-        <p>This social media mockup for instagram was a part of a larger VDP marketing project for a local music festival, shabang. As well as designing social media posts my group and I researched, created personalized marketing materials, email templates, and a large pitch deck of our marketing timeline and plan. 
-        </p>
-      </div>
-    </div>
+.logo {
+  height: 4em;
+  vertical-align: baseline;
+}
 
-    <div class="portfolio-item">
-      <img src="student-images/type-speciman.png" alt="Description of image 7" class="portfolio-image" />
-      <div class="portfolio-text">
-        <h3>Type Speciman Booklet</h3>
-        <p>This project was to design a type specimen pamphlet showcasing a 21st-century type family. This project was a deep dive into the art and functionality of typography, highlighting the design, history, and application of a specific font family. The project involved researching the font’s background, its designer, and its intended uses. I then created an eight-page pamphlet that celebrated the typeface, combining text and imagery to demonstrate its versatility and artistic qualities. 
-        </p>
-      </div>
-    </div>
+/* About section styling */
+.about-section {
+  margin-top: 40px;
+  max-width: 800px;
+}
 
-    <div class="portfolio-item">
-      <img src="student-images/drt.png" alt="Description of image 7" class="portfolio-image" />
-      <div class="portfolio-text">
-        <h3>Window Signage</h3>
-        <p> For this project, my group and I were tasked with designing new signage for the Graphic Communication building at Cal Poly. Each member created a panel for the signage, and together we styled the branding guidelines and incorporated the Graphic Communication logo. 
-        </p>
-      </div>
-    </div>
- 
- 
-  </section>
+.about-section p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #333;
+  font-weight: 300;
+  margin-bottom: 2em;
+}
 
-</body>
-</html>
+/* Student Work intro styling */
+.portfolio-intro {
+  max-width: 1000px;
+  margin: 0 auto 60px;
+  padding: 0 40px;
+}
+
+.portfolio-intro h2 {
+  font-size: 1.5em;
+  line-height: 1.6;
+  font-weight: 300;
+  color: #333;
+  text-align: left;
+}
+
+/* Portfolio section */
+.portfolio {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 130px;
+}
+
+.portfolio-item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.portfolio-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.portfolio-image {
+  width: 65%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-text {
+  width: 35%;
+}
+
+.portfolio-text h3 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.portfolio-text p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* Navigation Styles */
+.nav {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.nav a {
+  color: #111;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* Sections styling */
+.sections {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.section-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 40px 0;
+  text-decoration: none;
+  color: #111;
+  border-top: 1px solid rgb(238, 238, 238);
+  transition: all 0.2s ease-in-out;
+}
+
+.section-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-left h2 {
+  font-size: 48px;
+  font-weight: 500;
+  margin: 0;
+  transition: font-size 0.2s ease-in-out;
+}
+
+.section-right {
+  font-size: 36px;
+  font-weight: 500;
+  color: #111;
+  white-space: nowrap;
+  transition: font-size 0.2s ease-in-out;
+}
+
+.section-box:hover .section-left h2,
+.section-box:hover .section-left p,
+.section-box:hover .section-right {
+  font-size: 1.1em;
+}
+
+/* Carousel Styles */
+.image-carousel-container {
+  position: relative;
+  width: 90%;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.image-carousel {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 25%;
+  transition: all 0.3s ease;
+  opacity: 0.5;
+}
+
+.carousel-item.active {
+  width: 45%;
+  opacity: 1;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: rgba(200, 200, 200, 0.2);
+  color: rgba(100, 100, 100, 0.5);
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.carousel-control:hover {
+  background-color: rgba(200, 200, 200, 0.5);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding: 0 20px;
+  }
+
+  .hero h1 {
+    font-size: 3em;
+    margin-top: 20px;
+  }
+  
+  .portfolio-design,
+  .portfolio-portfolio {
+    font-size: 4em;
+  }
+  
+  .portfolio-item {
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .portfolio-image,
+  .portfolio-text {
+    width: 100%;
+  }
+  
+  .logo {
+    max-height: 2em;
+  }
+  
+  .nav {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .section-box {
+    padding: 20px 0;
+  }
+
+  .section-left h2 {
+    font-size: 32px;
+  }
+
+  .section-right {
+    font-size: 24px;
+  }
+
+  .carousel-item {
+    width: 80%;
+  }
+  
+  .carousel-item.active {
+    width: 90%;
+  }
+  
+  .about-section,
+  .portfolio-intro {
+    padding: 0 20px;
+  }
+
+  .portfolio-intro h2 {
+    font-size: 1.2em;
+  }
+}
