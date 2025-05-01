@@ -44,13 +44,14 @@ body {
 .portfolio-title {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
 .portfolio-design,
 .portfolio-portfolio {
   font-size: 14em;
   font-weight: 700;
-  line-height: 0.75;
+  line-height: 0.9;
   color: #111;
 }
 
