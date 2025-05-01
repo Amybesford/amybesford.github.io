@@ -1,5 +1,3 @@
-/* Your original CSS — unchanged */
-
 /* General font setup */
 body {
   margin: 0;
@@ -8,42 +6,101 @@ body {
   color: #111;
 }
 
-/* Hero section */
-.hero {
-  height: 100vh;
-  display: flex;
-  justify-content: space-between; /* Adjust to push text and logo apart */
-  align-items: flex-end; /* Align items to the bottom */
-  text-align: left; /* Align text to the left */
-  background-color: rgb(255, 255, 255);
-  padding: 0 40px; /* Add more padding to the sides */
-  position: relative; /* Add this if .nav is absolute */
+/* Content wrapper for alignment */
+.content-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
+/* Hero section - Updated */
+.hero {
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+/* Consistent page titles */
 .hero h1 {
-  font-size: 8em;
+  font-size: 6em;
   font-weight: 700;
-  margin: 0;
+  margin-top: 40px;
+  margin-bottom: 20px;
   color: #111;
 }
 
-.p2 {
-  font-size: medium;
-  font-size: 300;
-  text-align: justify;
-  align-self: auto;
+/* Landing page specific styles */
+.hero-content {
+  display: flex;
+  align-items: baseline;
+  gap: 40px;
+  width: 100%;
 }
 
+.portfolio-title {
+  display: flex;
+  flex-direction: column;
+}
 
+.portfolio-design,
+.portfolio-portfolio {
+  font-size: 14em;
+  font-weight: 700;
+  line-height: 0.75;
+  color: #111;
+}
+
+.logo-container {
+  align-self: flex-end;
+  margin-bottom: 0.5em;
+}
+
+.logo {
+  height: 4em;
+  vertical-align: baseline;
+}
+
+/* About section styling */
+.about-section {
+  margin-top: 40px;
+  max-width: 800px;
+}
+
+.about-section p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #333;
+  font-weight: 300;
+  margin-bottom: 2em;
+}
+
+/* Student Work intro styling */
+.portfolio-intro {
+  max-width: 1000px;
+  margin: 0 auto 60px;
+  padding: 0 40px;
+}
+
+.portfolio-intro h2 {
+  font-size: 1.5em;
+  line-height: 1.6;
+  font-weight: 300;
+  color: #333;
+  text-align: left;
+}
 
 /* Portfolio section */
 .portfolio {
-  max-width: 1400px; /* Make the container even wider */
+  max-width: 1400px;
   margin: 0 auto;
   padding: 80px 20px;
   display: flex;
   flex-direction: column;
-  gap: 130px; /* More space between projects */
+  gap: 130px;
 }
 
 .portfolio-item {
@@ -52,21 +109,17 @@ body {
   gap: 40px;
 }
 
-/* Alternate layout: flip image and text */
 .portfolio-item:nth-child(even) {
   flex-direction: row-reverse;
 }
 
-/* Image styling */
 .portfolio-image {
-  width: 65%; /* Larger image */
+  width: 65%;
   height: auto;
   object-fit: cover;
   display: block;
-  border-radius: 0; /* Remove rounded corners */
 }
 
-/* Text styling */
 .portfolio-text {
   width: 35%;
 }
@@ -83,72 +136,9 @@ body {
   line-height: 1.6;
 }
 
-/* Remove all hover effects */
-.portfolio-caption,
-.portfolio-item:hover .portfolio-caption {
-  all: unset;
-}
-
-/* Section box styles (updated with hover effect) */
-.sections {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 20px;
-}
-
-.section-box {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  padding: 40px 0;
-  text-decoration: none;
-  color: #111;
-  border-top: 1px solid rgb(238, 238, 238); /* Light grey */
-  transition: all 0.2s ease-in-out; /* Smooth transition */
-}
-
-.section-box:hover {
-  background-color: rgba(0, 0, 0, 0.05); /* Very light grey on hover */
-}
-
-.section-left {
-  display: flex;
-  flex-direction: column;
-  transition: font-size 0.2s ease-in-out; /* Smooth transition for font-size */
-}
-
-.section-left h2 {
-  font-size: 48px;
-  font-weight: 500;
-  margin-bottom: 10px;
-  color: #111;
-  transition: font-size 0.2s ease-in-out; /* Smooth transition for font-size */
-}
-
-.section-left p {
-  font-size: 18px;
-  font-weight: 300;
-  color: #666;
-  transition: font-size 0.2s ease-in-out; /* Smooth transition for font-size */
-}
-
-.section-right {
-  font-size: 36px;
-  font-weight: 500;
-  color: #111;
-  white-space: nowrap;
-  transition: font-size 0.2s ease-in-out; /* Smooth transition for font-size */
-}
-
-.section-box:hover .section-left h2,
-.section-box:hover .section-left p,
-.section-box:hover .section-right {
-  font-size: 1.1em; /* Increase font size on hover (1.1 times the original) */
-}
-
 /* Navigation Styles */
 .nav {
-  position: absolute; /* Or fixed, depending on layout */
+  position: absolute;
   top: 20px;
   right: 20px;
 }
@@ -164,50 +154,98 @@ body {
   text-decoration: underline;
 }
 
+/* Sections styling */
+.sections {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.section-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 40px 0;
+  text-decoration: none;
+  color: #111;
+  border-top: 1px solid rgb(238, 238, 238);
+  transition: all 0.2s ease-in-out;
+}
+
+.section-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-left h2 {
+  font-size: 48px;
+  font-weight: 500;
+  margin: 0;
+  transition: font-size 0.2s ease-in-out;
+}
+
+.section-right {
+  font-size: 36px;
+  font-weight: 500;
+  color: #111;
+  white-space: nowrap;
+  transition: font-size 0.2s ease-in-out;
+}
+
+.section-box:hover .section-left h2,
+.section-box:hover .section-left p,
+.section-box:hover .section-right {
+  font-size: 1.1em;
+}
+
 /* Carousel Styles */
 .image-carousel-container {
   position: relative;
-  width: 80%; /* Adjust as needed */
+  width: 90%;
   margin: 20px auto;
   overflow: hidden;
 }
 
 .image-carousel {
   display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .carousel-item {
   flex: 0 0 auto;
-  width: 70%; /* Main image width */
-  scroll-snap-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 25%;
+  transition: all 0.3s ease;
+  opacity: 0.5;
+}
+
+.carousel-item.active {
+  width: 45%;
+  opacity: 1;
 }
 
 .carousel-item img {
-  max-width: 100%;
-  max-height: 80vh; /* Adjust as needed */
-  object-fit: contain;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .carousel-control {
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   width: 50px;
   height: 50px;
-  background-color: rgba(200, 200, 200, 0.2); /* Faint grey */
+  background-color: rgba(200, 200, 200, 0.2);
   color: rgba(100, 100, 100, 0.5);
   border: none;
   font-size: 2em;
-  cursor:pointer;
-  transform: translateY(-50%);
+  cursor: pointer;
   z-index: 10;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .carousel-control:hover {
@@ -223,113 +261,68 @@ body {
   right: 10px;
 }
 
-/* ------------ Mobile Responsive Adjustments ------------ */
+/* Mobile Responsive Adjustments */
 @media (max-width: 768px) {
-    .hero h1 {
-      font-size: 3em;
-    }
+  .content-wrapper {
+    padding: 0 20px;
   }
 
+  .hero h1 {
+    font-size: 3em;
+    margin-top: 20px;
+  }
+  
+  .portfolio-design,
+  .portfolio-portfolio {
+    font-size: 4em;
+  }
+  
   .portfolio-item {
     flex-direction: column;
-    gap: 20px;
-    text-align: center;
+    padding: 20px;
   }
-
+  
   .portfolio-image,
   .portfolio-text {
     width: 100%;
   }
-
-  .portfolio-text h3 {
-    font-size: 28px;
+  
+  .logo {
+    max-height: 2em;
   }
-
-  .portfolio-text p {
-    font-size: 18px;
+  
+  .nav {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
   }
-
+  
   .section-box {
-    flex-direction: column;
-    align-items: flex-start;
+    padding: 20px 0;
   }
 
   .section-left h2 {
     font-size: 32px;
   }
 
-  .section-left p {
-    font-size: 16px;
-  }
-
   .section-right {
-    font-size: 28px;
-    margin-top: 10px;
-  }
-
-  .nav {
-    top: 10px;
-    right: 10px;
-  }
-
-  .nav a {
-    margin-left: 10px;
-    font-size: 14px;
+    font-size: 24px;
   }
 
   .carousel-item {
+    width: 80%;
+  }
+  
+  .carousel-item.active {
     width: 90%;
   }
+  
+  .about-section,
+  .portfolio-intro {
+    padding: 0 20px;
+  }
 
-  .image-carousel-container {
-    width: 90%;
+  .portfolio-intro h2 {
+    font-size: 1.2em;
   }
 }
-
-/* New styles for the hero content */
-.hero-content {
-  display: flex;
-  justify-content: space-between; /* Push title to the left, logo to the right */
-  align-items: flex-end; /* Align both to the bottom */
-  width: 100%; /* Take full width of the hero */
-  padding: 0 40px; /* More horizontal padding */
-}
-
-.portfolio-title {
-  display: flex;
-  flex-direction: column;
-}
-
-.portfolio-design {
-  font-size: 14em; /* Even larger font size */
-  font-weight: 700;
-  line-height: 0.75; /* Tighter line height */
-  color: #111;
-  margin-bottom: .25em; /* Further reduce space below 'Design' */
-}
-
-.portfolio-portfolio {
-  font-size: 14em; /* Even larger font size */
-  font-weight: 700;
-  line-height: 0.75;
-  color: #111;
-}
-
-.logo-container {
-  /* Adjust for smaller size and alignment */
-  /* display: flex; */ /* Not strictly needed if just containing the image */
-  /* justify-content: flex-end; */ /* Align to the right of the hero-content */
-  align-self: flex-end; /* Ensure it aligns to the bottom */
-  margin-bottom: 0.2em; /* Adjust vertical spacing */
-}
-
-.logo {
-  max-height: 4.5em; /* Much smaller logo */
-  /* vertical-align: bottom; */ /* Ensure baseline alignment */
-}
-
-/* ------------ Mobile Responsive Adjustments ------------ */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 3em;
-  }
