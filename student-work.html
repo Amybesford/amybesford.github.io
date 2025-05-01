@@ -1,5 +1,4 @@
-<!DOCTYPE htm
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
    <head>
       <meta charset="UTF-8" />
@@ -82,20 +81,26 @@
          </section>
       </div>
       <script>
-         // Function to align content with title
          function alignContent() {
-           const hero = document.querySelector('.hero h1');
-           const portfolioIntro = document.querySelector('.portfolio-intro');
-           if (hero && portfolioIntro) {
-             const heroOffset = hero.getBoundingClientRect().left;
-             portfolioIntro.style.marginLeft = `${heroOffset}px`;
-             portfolioIntro.style.maxWidth = 'none'; // Remove max-width constraint
-           }
+             const hero = document.querySelector('.hero h1');
+             const contentToAlign = document.querySelector('.portfolio-intro, .about-section');
+             
+             if (hero && contentToAlign) {
+                 const heroOffset = hero.getBoundingClientRect().left;
+                 contentToAlign.style.paddingLeft = `${heroOffset}px`;
+             }
          }
-         
+
          // Run on load and resize
          window.addEventListener('load', alignContent);
          window.addEventListener('resize', alignContent);
+         
+         // Add a debounced resize handler for smoother performance
+         let resizeTimeout;
+         window.addEventListener('resize', () => {
+             clearTimeout(resizeTimeout);
+             resizeTimeout = setTimeout(alignContent, 100);
+         });
       </script>
    </body>
 </html>
