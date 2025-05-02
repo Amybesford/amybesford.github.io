@@ -1,0 +1,317 @@
+/* General font setup */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: rgb(255, 255, 255);
+  color: #111;
+}
+
+/* Content wrapper for alignment */
+.content-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Hero section - Updated */
+.hero {
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+/* Consistent page titles */
+.hero h1 {
+  font-size: 6em;
+  font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #111;
+  padding-left: calc((100% - 800px) / 2); /* New alignment rule */
+}
+
+/* Landing page specific styles */
+.hero-content {
+  display: flex;
+  align-items: baseline;
+  gap: 40px;
+  width: 100%;
+}
+
+.portfolio-title {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.portfolio-design,
+.portfolio-portfolio {
+  font-size: 14em;
+  font-weight: 700;
+  line-height: 0.9;
+  color: #111;
+}
+
+.logo-container {
+  align-self: flex-end;
+  margin-bottom: 0.5em;
+}
+
+.logo {
+  height: 4em;
+  vertical-align: baseline;
+}
+
+/* About section styling - Updated */
+.about-section {
+  max-width: 800px; /* Updated width */
+  margin: 0 auto;
+  padding: 0;
+}
+
+.about-section p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #333;
+  font-weight: 300;
+  margin-bottom: 2em;
+}
+
+/* Student Work intro styling - Updated */
+.portfolio-intro {
+  max-width: none;
+  margin: 0;
+  padding: 0 40px;
+}
+
+.portfolio-intro h2 {
+  font-size: 1.2em;
+  line-height: 1.6;
+  font-weight: 300;
+  color: #333;
+  text-align: left;
+  max-width: 1000px;
+}
+
+/* Portfolio section */
+.portfolio {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 130px;
+}
+
+.portfolio-item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.portfolio-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.portfolio-image {
+  width: 65%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-text {
+  width: 35%;
+}
+
+.portfolio-text h3 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.portfolio-text p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* Navigation Styles */
+.nav {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.nav a {
+  color: #111;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* Sections styling - Updated */
+.sections {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.section-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 40px 0;
+  text-decoration: none;
+  color: #111;
+  border-top: 1px solid rgb(238, 238, 238);
+  transition: all 0.3s ease;
+}
+
+.section-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-left h2,
+.section-right {
+  font-size: 48px;
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.section-box:hover .section-left h2,
+.section-box:hover .section-right {
+  transform: scale(1.083); /* Approx. 48px to 52px */
+}
+
+.section-right {
+  font-size: 36px;
+  font-weight: 500;
+  color: #111;
+  white-space: nowrap;
+}
+
+/* Carousel Styles */
+.image-carousel-container {
+  position: relative;
+  width: 90%;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.image-carousel {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 25%;
+  transition: all 0.3s ease;
+  opacity: 0.5;
+}
+
+.carousel-item.active {
+  width: 45%;
+  opacity: 1;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: rgba(200, 200, 200, 0.2);
+  color: rgba(100, 100, 100, 0.5);
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.carousel-control:hover {
+  background-color: rgba(200, 200, 200, 0.5);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 840px) {  /* Updated breakpoint */
+  .content-wrapper {
+    padding: 0 20px;
+  }
+
+  .hero h1 {
+    font-size: 3em;
+    margin-top: 20px;
+    padding-left: 20px; /* New alignment rule for mobile */
+  }
+  
+  .portfolio-design,
+  .portfolio-portfolio {
+    font-size: 4em;
+  }
+  
+  .portfolio-item {
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .portfolio-image,
+  .portfolio-text {
+    width: 100%;
+  }
+  
+  .logo {
+    max-height: 2em;
+  }
+  
+  .nav {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .section-box {
+    padding: 20px 0;
+  }
+
+  .section-left h2 {
+    font-size: 32px;
+  }
+
+  .section-right {
+    font-size: 24px;
+  }
+
+  .carousel-item {
+    width: 80%;
+  }
