@@ -1,19 +1,49 @@
-/* General font setup */
+/* =========================
+   Global Styles
+========================= */
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: rgb(255, 255, 255);
+  background-color: #fff;
   color: #111;
 }
 
-/* Content wrapper for alignment */
+/* =========================
+   Layout Wrappers
+========================= */
+
 .content-wrapper {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 40px;
 }
 
-/* Hero section - Updated */
+/* =========================
+   Navigation
+========================= */
+
+.nav {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.nav a {
+  color: #111;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   Hero Section
+========================= */
+
 .hero {
   min-height: 30vh;
   display: flex;
@@ -24,17 +54,14 @@ body {
   margin-bottom: 40px;
 }
 
-/* Consistent page titles */
 .hero h1 {
   font-size: 6em;
   font-weight: 700;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin: 40px 0 20px;
   color: #111;
-  padding-left: calc((100% - 800px) / 2); /* New alignment rule */
+  padding-left: calc((100% - 800px) / 2);
 }
 
-/* Landing page specific styles */
 .hero-content {
   display: flex;
   align-items: baseline;
@@ -66,9 +93,12 @@ body {
   vertical-align: baseline;
 }
 
-/* About section styling - Updated */
+/* =========================
+   About Section
+========================= */
+
 .about-section {
-  max-width: 800px; /* Updated width */
+  max-width: 800px;
   margin: 0 auto;
   padding: 0;
 }
@@ -81,9 +111,11 @@ body {
   margin-bottom: 2em;
 }
 
-/* Student Work intro styling - Updated */
+/* =========================
+   Portfolio Intro
+========================= */
+
 .portfolio-intro {
-  max-width: none;
   margin: 0;
   padding: 0 40px;
 }
@@ -97,7 +129,10 @@ body {
   max-width: 1000px;
 }
 
-/* Portfolio section */
+/* =========================
+   Portfolio Section
+========================= */
+
 .portfolio {
   max-width: 1400px;
   margin: 0 auto;
@@ -140,25 +175,10 @@ body {
   line-height: 1.6;
 }
 
-/* Navigation Styles */
-.nav {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
+/* =========================
+   Sections
+========================= */
 
-.nav a {
-  color: #111;
-  text-decoration: none;
-  margin-left: 20px;
-  font-weight: 500;
-}
-
-.nav a:hover {
-  text-decoration: underline;
-}
-
-/* Sections styling - Updated */
 .sections {
   max-width: 1200px;
   margin: 0 auto;
@@ -172,7 +192,7 @@ body {
   padding: 40px 0;
   text-decoration: none;
   color: #111;
-  border-top: 1px solid rgb(238, 238, 238);
+  border-top: 1px solid #eee;
   transition: all 0.3s ease;
 }
 
@@ -190,7 +210,7 @@ body {
 
 .section-box:hover .section-left h2,
 .section-box:hover .section-right {
-  transform: scale(1.083); /* Approx. 48px to 52px */
+  transform: scale(1.083);
 }
 
 .section-right {
@@ -200,7 +220,10 @@ body {
   white-space: nowrap;
 }
 
-/* Carousel Styles */
+/* =========================
+   Carousel
+========================= */
+
 .image-carousel-container {
   position: relative;
   width: 90%;
@@ -263,8 +286,72 @@ body {
   right: 10px;
 }
 
-/* Mobile Responsive Adjustments */
-@media (max-width: 840px) {  /* Updated breakpoint */
+/* =========================
+   Footer
+========================= */
+
+footer {
+  background-color: #f5f5f5;
+  padding: 80px 40px 40px;
+  margin-top: 60px;
+  border-top: 1px solid #000;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  text-align: left;
+}
+
+.footer-column h4 {
+  color: #333;
+  font-size: 1em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #666;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: 300;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #333;
+}
+
+.footer-bottom {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  color: #666;
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+/* =========================
+   Responsive Styles
+========================= */
+
+@media (max-width: 840px) {
   .content-wrapper {
     padding: 0 20px;
   }
@@ -272,34 +359,34 @@ body {
   .hero h1 {
     font-size: 3em;
     margin-top: 20px;
-    padding-left: 20px; /* New alignment rule for mobile */
+    padding-left: 20px;
   }
-  
+
   .portfolio-design,
   .portfolio-portfolio {
     font-size: 4em;
   }
-  
+
   .portfolio-item {
     flex-direction: column;
     padding: 20px;
   }
-  
+
   .portfolio-image,
   .portfolio-text {
     width: 100%;
   }
-  
+
   .logo {
     max-height: 2em;
   }
-  
+
   .nav {
     position: relative;
     text-align: center;
     margin-top: 20px;
   }
-  
+
   .section-box {
     padding: 20px 0;
   }
@@ -315,3 +402,20 @@ body {
   .carousel-item {
     width: 80%;
   }
+
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    text-align: center;
+  }
+
+  footer {
+    padding: 60px 20px 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
