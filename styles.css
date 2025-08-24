@@ -7,6 +7,7 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: #fff;
   color: #111;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* =========================
@@ -34,6 +35,7 @@ body {
   text-decoration: none;
   margin-left: 20px;
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .nav a:hover {
@@ -59,7 +61,8 @@ body {
   font-weight: 700;
   margin: 40px 0 20px;
   color: #111;
-  padding-left: calc((100% - 800px) / 2);
+  padding-left: 0; /* Remove any left padding */
+  transition: color 0.3s ease;
 }
 
 .hero-content {
@@ -73,6 +76,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  cursor: pointer;
 }
 
 .portfolio-design,
@@ -81,6 +85,7 @@ body {
   font-weight: 700;
   line-height: 0.9;
   color: #111;
+  transition: color 0.3s ease;
 }
 
 .logo-container {
@@ -91,6 +96,7 @@ body {
 .logo {
   height: 4em;
   vertical-align: baseline;
+  transition: filter 0.3s ease;
 }
 
 /* =========================
@@ -99,8 +105,8 @@ body {
 
 .about-section {
   max-width: 800px;
-  margin: 0 auto;
-  padding: 0;
+  margin: 0;
+  padding: 0 40px;
 }
 
 .about-section p {
@@ -109,6 +115,7 @@ body {
   color: #333;
   font-weight: 300;
   margin-bottom: 2em;
+  transition: color 0.3s ease;
 }
 
 /* =========================
@@ -118,6 +125,7 @@ body {
 .portfolio-intro {
   margin: 0;
   padding: 0 40px;
+  margin-bottom: 60px;
 }
 
 .portfolio-intro h2 {
@@ -127,6 +135,7 @@ body {
   color: #333;
   text-align: left;
   max-width: 1000px;
+  transition: color 0.3s ease;
 }
 
 /* =========================
@@ -144,7 +153,7 @@ body {
 
 .portfolio-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 40px;
 }
 
@@ -157,22 +166,38 @@ body {
   height: auto;
   object-fit: cover;
   display: block;
+  transition: filter 0.3s ease;
+  vertical-align: top; /* Added to ensure proper alignment */
+}
+
+/* Target specifically the Sandpiper image */
+img[src="freelance-images/sandpiper.png"] {
+  max-width: 90%;
 }
 
 .portfolio-text {
   width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-self: flex-start;
+  margin-top: 0; /* Added to ensure text starts at the top */
+  padding-top: 0; /* Added to ensure text starts at the top */
 }
 
 .portfolio-text h3 {
   font-size: 36px;
   font-weight: 700;
+  margin-top: 0; /* Ensures title starts at the very top */
   margin-bottom: 15px;
+  transition: color 0.3s ease;
 }
 
 .portfolio-text p {
   font-size: 20px;
   font-weight: 300;
   line-height: 1.6;
+  transition: color 0.3s ease;
 }
 
 /* =========================
@@ -193,7 +218,7 @@ body {
   text-decoration: none;
   color: #111;
   border-top: 1px solid #eee;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease, border-top 0.3s ease;
 }
 
 .section-left {
@@ -205,7 +230,7 @@ body {
 .section-right {
   font-size: 48px;
   transform-origin: left;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .section-box:hover .section-left h2,
@@ -256,6 +281,7 @@ body {
   width: 100%;
   height: auto;
   object-fit: cover;
+  transition: filter 0.3s ease;
 }
 
 .carousel-control {
@@ -296,6 +322,7 @@ footer {
   margin-top: 60px;
   border-top: 1px solid #000;
   text-align: center;
+  transition: background-color 0.3s ease, border-top 0.3s ease;
 }
 
 .footer-content {
@@ -305,6 +332,7 @@ footer {
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   text-align: left;
+  transition: color 0.3s ease;
 }
 
 .footer-column h4 {
@@ -313,6 +341,7 @@ footer {
   font-weight: 700;
   margin-bottom: 20px;
   text-transform: uppercase;
+  transition: color 0.3s ease;
 }
 
 .footer-column ul {
@@ -345,6 +374,7 @@ footer {
   color: #666;
   font-size: 0.8em;
   font-weight: 300;
+  transition: all 0.3s ease;
 }
 
 /* =========================
@@ -359,7 +389,7 @@ footer {
   .hero h1 {
     font-size: 3em;
     margin-top: 20px;
-    padding-left: 20px;
+    padding-left: 0;
   }
 
   .portfolio-design,
@@ -370,6 +400,10 @@ footer {
   .portfolio-item {
     flex-direction: column;
     padding: 20px;
+  }
+
+  .portfolio-item:nth-child(even) {
+    flex-direction: column; /* Override alternating layout on mobile */
   }
 
   .portfolio-image,
